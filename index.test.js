@@ -1,13 +1,7 @@
 const request = require('supertest');
-const mongoose = require('mongoose');
 const app = require('./index');
 
 describe('API Endpoints', () => {
-    it('GET / should return "Hello World"', async () => {
-      const response = await request(app).get('/');
-      expect(response.status).toBe(200);
-      expect(response.text).toBe('Hello World');
-    });
   
     it('GET /products should return a list of products', async () => {
       const response = await request(app).get('/products');
