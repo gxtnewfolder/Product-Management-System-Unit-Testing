@@ -27,10 +27,6 @@ const connectDB = async () => {
 
 connectDB();
 
-app.get('/', function (req, res) {
-  res.send('Hello World!');
-});
-
 // Read all products
 app.get('/products', async (req, res) => {
   try {
