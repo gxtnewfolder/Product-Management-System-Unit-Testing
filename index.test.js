@@ -16,7 +16,7 @@ describe('API Endpoints', () => {
     });
   
     it('GET /products/:id should return a single product', async () => {
-      const response = await request(app).get('/products/your-product-id'); // แทนที่ด้วย ID ที่มีอยู่ในฐานข้อมูล
+      const response = await request(app).get('/products/your-product-id');
       expect(response.status).toBe(200);
       expect(typeof response.body === 'object' && response.body !== null).toBe(true);
     });
@@ -44,7 +44,7 @@ describe('API Endpoints', () => {
       };
   
       const response = await request(app)
-        .put('/products/your-product-id') // แทนที่ด้วย ID ที่มีอยู่ในฐานข้อมูล
+        .put('/products/your-product-id')
         .send(updatedProductData);
   
       expect(response.status).toBe(200);
@@ -52,7 +52,7 @@ describe('API Endpoints', () => {
     });
   
     it('DELETE /products/:id should delete a product', async () => {
-      const response = await request(app).delete('/products/your-product-id'); // แทนที่ด้วย ID ที่มีอยู่ในฐานข้อมูล
+      const response = await request(app).delete('/products/your-product-id');
       expect(response.status).toBe(200);
     });
 });
